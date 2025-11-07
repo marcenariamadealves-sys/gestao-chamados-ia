@@ -1,0 +1,23 @@
+@page
+@{
+    ViewData["Title"] = "Novo Chamado";
+}
+
+<h2>Abrir Novo Chamado</h2>
+
+<form method="post" action="/Chamados/Salvar">
+    <label for="titulo">Título:</label><br>
+    <input type="text" id="titulo" name="titulo" required><br><br>
+
+    <label for="descricao">Descrição:</label><br>
+    <textarea id="descricao" name="descricao" rows="4" cols="50" required></textarea><br><br>
+
+    <label for="categoria">Categoria:</label><br>
+    <select id="categoria" name="categoria" required>
+        <option value="TI">TI</option>
+        <option value="Manutenção">Manutenção</option>
+        <option value="Administração">Administração</option>
+    </select><br><br>
+
+    <button type="submit">Registrar Chamado</button>
+</form>
