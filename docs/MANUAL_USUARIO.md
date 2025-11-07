@@ -1,125 +1,127 @@
-# Manual do Usuário — Sistema de Gestão de Chamados e Suporte Técnico com IA
+Manual do Usuário — Sistema de Gestão de Chamados e Suporte Técnico com IA
+1. Objetivo
 
-## 1. Introdução
-Este manual tem como objetivo orientar os colaboradores da **Marcenaria Madealves** no uso do sistema de gestão de chamados e suporte técnico.  
-O sistema foi desenvolvido para agilizar o atendimento, organizar solicitações e permitir acompanhamento em tempo real dos chamados.
+Este manual orienta os colaboradores da Marcenaria Madealves sobre o uso do sistema de Gestão de Chamados e Suporte Técnico com IA, explicando o funcionamento básico das versões Desktop, Web e Mobile.
 
-O sistema possui versões para **desktop**, **web** e **mobile (Android)**, todas conectadas à mesma base de dados e API central.
+2. Acesso ao Sistema
 
----
+Para acessar o sistema, o usuário deve informar seu login e senha fornecidos pela administração.
+O sistema está disponível em três plataformas:
 
-## 2. Acesso ao Sistema
-Cada colaborador recebe um **login** e **senha** fornecidos pela administração.
+Desktop: uso interno pelos computadores da empresa.
 
-### Acesso via Desktop
-1. Abra o aplicativo **Gestão de Chamados Desktop**.  
-2. Informe **usuário** e **senha**.  
-3. Clique em **Entrar** para acessar o painel principal.
+Web: acesso remoto via navegador.
 
-### Acesso via Web
-1. Acesse o endereço do sistema no navegador (exemplo: `http://madealves-chamados.com`).  
-2. Digite **usuário** e **senha**.  
-3. Clique em **Entrar**.
+Mobile: uso em campo pelos técnicos (Android).
 
-### Acesso via Mobile (Android)
-1. Abra o aplicativo **Gestão de Chamados Mobile** no celular.  
-2. Informe as credenciais e toque em **Login**.
+3. Versão Desktop
 
----
+A versão desktop foi desenvolvida em C# (Windows Forms), com foco na praticidade para os atendentes e administradores.
 
-## 3. Tela Inicial / Dashboard
-Após o login, o usuário será direcionado ao **Dashboard**, que exibe:
-- Quantidade total de chamados.
-- Chamados **em aberto**, **em andamento** e **concluídos**.
-- Botões de acesso rápido para abrir novos chamados ou visualizar históricos.
+Principais telas:
 
----
+Login: autenticação do usuário.
 
-## 4. Abertura de Chamado
-Para registrar um novo chamado:
+Dashboard: exibe os chamados abertos, em andamento e finalizados.
 
-1. Acesse o menu **“Novo Chamado”**.  
-2. Preencha os campos obrigatórios:
-   - Título do problema  
-   - Descrição detalhada  
-   - Categoria (ex: manutenção, TI, atendimento)  
-   - Prioridade (baixa, média, alta)  
-3. Clique em **Salvar**.  
-O chamado será registrado e ficará disponível para acompanhamento.
+Formulário de Chamado: registro de novas solicitações.
 
----
+Relatórios: visualização de métricas e status.
 
-## 5. Acompanhamento de Chamados
-Na tela **“Acompanhamento”**, é possível:
-- Visualizar todos os chamados abertos.  
-- Filtrar por status (aberto, em andamento, finalizado).  
-- Consultar histórico e respostas do suporte técnico.  
-- Encerrar chamados após a resolução.  
+Execução:
+Abra GestaoChamadosDesktop.sln no Visual Studio, configure o banco de dados e pressione F5 para iniciar.
 
----
+4. Versão Web
 
-## 6. Perguntas Frequentes (FAQ)
-O módulo de **FAQ Dinâmica** apresenta soluções automáticas com base no histórico de chamados e respostas geradas pela IA.  
-O usuário pode:
-- Pesquisar dúvidas comuns.  
-- Receber respostas automáticas sugeridas pela IA.  
-- Avaliar a utilidade da resposta para aprimorar o sistema.
+Desenvolvida em ASP.NET MVC (C#), a versão web é responsiva e acessível por qualquer navegador moderno.
 
----
+Páginas principais:
 
-## 7. Encerramento de Chamados
-Somente o colaborador que abriu o chamado ou o administrador pode encerrá-lo.  
-Para encerrar:
-1. Acesse o chamado.  
-2. Clique em **“Encerrar Chamado”**.  
-3. Confirme a finalização.  
+Login.cshtml → Tela de autenticação.
 
-O status mudará para **“Concluído”**, e o registro ficará disponível para consulta no histórico.
+Dashboard.cshtml → Painel com resumo dos chamados.
 
----
+Formulario.cshtml → Registro de chamados.
 
-## 8. Perfil do Usuário
-Na seção **“Perfil”**, o usuário pode:
-- Alterar senha.  
-- Atualizar dados pessoais (nome, e-mail, telefone).  
-- Verificar permissões e nível de acesso.
+Acompanhamento.cshtml → Consulta e andamento das solicitações.
 
----
+PerguntasFrequentes/Index.cshtml → FAQ com suporte automatizado via IA.
 
-## 9. Relatórios
-Usuários com acesso administrativo podem:
-- Gerar relatórios de atendimentos.  
-- Exportar dados em **PDF** ou **Excel**.  
-- Visualizar métricas por setor, técnico ou período.  
+Execução:
+Abra GestaoChamadosWeb.sln e execute o servidor local no Visual Studio.
 
----
+5. Versão Mobile
 
-## 10. Suporte e Contato
-Caso ocorra algum problema:
-- Enviar e-mail para **marcenariamadealves@gmail.com**  
-- Informar o **código do chamado** e o **erro ocorrido**.  
-- O setor de TI responderá com orientações.
+Criada em Java (Android Studio), a versão mobile foi projetada para uso pelos técnicos em campo.
 
----
+Principais arquivos:
 
-## 11. Dicas de Uso
-- Sempre feche o sistema após o uso para proteger seus dados.  
-- Utilize descrições detalhadas nos chamados para agilizar o suporte.  
-- Consulte a FAQ antes de abrir um novo chamado, evitando duplicidades.  
+MainActivity.java → Tela principal do aplicativo.
 
----
+activity_main.xml → Layout principal da interface.
 
-## 12. Créditos do Sistema
-Projeto desenvolvido por alunos da **UNIP (PIM IV – 2025/2)**  
-**Sistema Integrado de Gestão de Chamados e Suporte Técnico com IA**
+AndroidManifest.xml → Configurações e permissões.
 
-| Integrante | Função |
-|-------------|--------|
-| Kauan Luiz | Líder / Integração |
-| Enzo Ferrari | Backend e Banco de Dados |
-| Lucas Vieira | Mobile e QA |
+build.gradle → Dependências e build.
 
----
+proguard-rules.pro → Regras de segurança e otimização.
 
- **Contato:** marcenariamadealves@gmail.com  
- **Versão:** 1.0.0 — Novembro/2025  
+Instalação:
+Abra o projeto no Android Studio, conecte o celular (modo desenvolvedor) e clique em ▶️ Run App.
+
+6. Integração com IA
+
+O sistema possui integração simulada com ChatGPT, usada para:
+
+Respostas automáticas em perguntas frequentes.
+
+Sugestões de soluções baseadas em chamados anteriores.
+
+Apoio inteligente no atendimento e triagem de chamados.
+
+7. Dicas de Uso
+
+Utilize senhas seguras e não compartilhe seu acesso.
+
+Antes de abrir um chamado, consulte a FAQ (Perguntas Frequentes).
+
+Verifique o status de chamados abertos no Dashboard.
+
+Feche chamados apenas após confirmar a solução com o cliente.
+
+8. Figuras Ilustrativas
+
+Figura 23 — Tela de Login (Desktop)
+Exibe campos de login e senha para autenticação do usuário.
+
+Figura 24 — Tela Principal (Dashboard - Desktop)
+Mostra os chamados abertos, em andamento e encerrados.
+
+Figura 25 — Formulário de Novo Chamado (Desktop)
+Permite registrar novas solicitações de suporte.
+
+Figura 26 — Relatórios e Métricas (Desktop)
+Gera relatórios com dados de desempenho e atendimento.
+
+Figura 27 — Página de Login (Web)
+Autenticação de usuários via navegador.
+
+Figura 28 — Painel Web (Dashboard)
+Apresenta a lista de chamados e seus status.
+
+Figura 29 — Formulário Web
+Tela de abertura de chamados via navegador.
+
+Figura 30 — Acompanhamento Web
+Consulta de andamento de chamados e mensagens de suporte.
+
+Figura 31 — FAQ (Perguntas Frequentes)
+Exibe respostas automáticas e ajuda via IA.
+
+9. Suporte e Contato
+
+Em caso de dúvidas ou problemas técnicos, entre em contato:
+marcenariamadealves@gmail.com
+
+Marcenaria Madealves — PIM IV (UNIP 2025/2)
+Projeto: Sistema Integrado de Gestão de Chamados com IA
