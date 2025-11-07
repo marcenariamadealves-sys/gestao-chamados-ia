@@ -1,90 +1,53 @@
-# Sistema Integrado de Gestão de Chamados e Suporte Técnico com IA
+# Gestão de Chamados (Marcenaria Madealves)
 
-Este projeto foi desenvolvido como parte do **PIM IV** do curso de **Análise e Desenvolvimento de Sistemas (UNIP - 2025/2)**, com o objetivo de criar um sistema inteligente de **gestão de chamados de suporte técnico** que utiliza **Inteligência Artificial** para otimizar atendimentos e gerar FAQs dinâmicas.
+Resumo
+Sistema integrado para gestão de chamados e suporte técnico com recursos de IA (simulação). Desenvolvido como PIM IV — UNIP 2025/2.
 
----
+Tecnologias principais
+- Backend/API: ASP.NET 6 (C#)
+- Web: ASP.NET MVC (C#)
+- Desktop: C# (Windows Forms)
+- Mobile: Java (Android Studio)
+- Banco de dados: MS SQL Server
+- Controle de versão: Git / GitHub
 
-## Objetivo Geral
-Desenvolver um sistema integrado (Desktop, Web e Mobile) para o controle de chamados e suporte técnico, com recursos de automação, relatórios, histórico de atendimentos e integração com IA generativa.
+Estrutura do repositório
+- /backend/  — API REST (GestaoChamadosAPI)
+- /web/      — Aplicação web (Views, Controllers)
+- /desktop/  — Aplicativo desktop (Windows Forms)
+- /mobile/   — Projeto Android (Java)
+- /banco de dados/ — Scripts SQL (create, insert, procedures)
+- /docs/     — Documentação técnica e manuais
 
----
+Execução rápida (essencial)
+1. Banco de dados
+   - Executar scripts em `/banco de dados/`:
+     - create_database.sql
+     - insert_data.sql
+     - procedures.sql
+   - String de conexão padrão de exemplo:
+     `Server=localhost;Database=GestaoChamados;Trusted_Connection=True;`
 
-## Arquitetura Geral
-- **Frontend Desktop:** C# (Windows Forms/WPF)  
-- **Frontend Web:** ASP.NET MVC (C#)  
-- **Frontend Mobile:** Java + Android Studio  
-- **Backend:** ASP.NET + Web API  
-- **Banco de Dados:** Microsoft SQL Server  
-- **IA Generativa:** ChatGPT (simulações de FAQ dinâmica)  
-- **Controle de Versão:** Git + GitHub
+2. Backend (API)
+   - Abra `backend/GestaoChamadosAPI.sln` ou `backend/GestaoChamadosAPI.csproj` no Visual Studio.
+   - Configure a string de conexão se necessário e execute o projeto.
 
----
+3. Web
+   - Abra `web/GestaoChamadosWeb.sln` no Visual Studio.
+   - Ajuste `appsettings.json` para apontar à API/banco e execute.
 
-## Instalação e Execução
+4. Desktop
+   - Abra `desktop/GestaoChamadosDesktop.sln` no Visual Studio.
+   - Configure a conexão ao banco e execute.
 
-### 1) Banco de Dados
-1. Instale o **SQL Server**.
-2. Execute os scripts da pasta `/database/`:
-   - `create_database.sql`
-   - `insert_data.sql`
-   - `procedures.sql`
+5. Mobile
+   - Abra o diretório `mobile/` no Android Studio.
+   - Ajuste o endpoint da API e execute no emulador ou dispositivo.
 
-### 2) Aplicação Web
-1. Abra `/web/GestaoChamadosWeb.sln` no **Visual Studio**.
-2. Configure a **connection string** no `appsettings.json`.
-3. Execute o projeto.
+Documentação e suporte
+- Documentação técnica: `/docs/DOCUMENTACAO_TECNICA.md`
+- Manual do usuário: `/docs/MANUAL_DO_USUARIO.md`
+- Contato: marcenariamadealves@gmail.com
 
-### 3) Aplicação Desktop
-1. Abra `/desktop/GestaoChamadosDesktop.sln` no Visual Studio.
-2. Configure a conexão com o SQL Server.
-3. Execute o aplicativo.
-
-### 4) Aplicativo Mobile
-1. Abra `/mobile/` no **Android Studio**.
-2. Execute em emulador/dispositivo.
-3. O app consome a **API REST** do backend.
-
----
-
-## Principais Funcionalidades
-- Cadastro e acompanhamento de chamados.  
-- FAQ dinâmica com base no histórico.  
-- Dashboards administrativos e relatórios.  
-- Controle de usuários e permissões.  
-- Conformidade com a **LGPD**.
-
----
-
-## Uso de Inteligência Artificial
-- Sugestões automáticas de resposta.  
-- Geração de conteúdo para a FAQ.  
-- Apoio à documentação técnica.
-
----
-
-## Documentação
-Arquivos na pasta `/docs/`:
-- Manual do Usuário  
-- Diagramas UML e MER  
-- Plano de Homologação  
-- Relatórios de Testes  
-- Apresentação em PowerPoint
-
----
-
-## Equipe
-| Integrante | Função |
-|------------|--------|
-| Kauan Luiz | Líder / Integrador |
-| Enzo Ferrari | Backend / DB |
-| Lucas Vieira | Mobile / QA |
-
----
-
-## Versionamento
-Branching: `main` (estável) / `develop` / `feature/*` / `hotfix/*`
-
----
-
-## Contato
-marcenariamadealves@gmail.com
+Licença
+- Ver arquivo `LICENSE` no repositório.
